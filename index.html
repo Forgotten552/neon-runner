@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Runner - Juego Estilo Dino</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="header">
+        <h1 class="title">NEON RUNNER</h1>
+        <div class="coins-display">
+          <span class="coins-icon">🪙</span>
+          <span id="coinsDisplay" class="coins-value">0</span>
+        </div>
+        <div class="score-display">
+          <span class="score-label">SCORE</span>
+          <span id="score" class="score-value">0</span>
+        </div>
+        <div class="high-score-display">
+          <span class="high-score-label">BEST</span>
+          <span id="highScore" class="high-score-value">0</span>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas"></canvas>
+
+      <!-- Menú Principal -->
+      <div id="mainMenu" class="main-menu">
+        <div class="menu-content">
+          <div class="menu-header">
+            <span class="menu-coins">🪙 <span id="menuCoins">0</span></span>
+          </div>
+          <h2 class="menu-title">NEON RUNNER</h2>
+          <div class="menu-buttons">
+            <button id="playBtn" class="menu-button play-btn">JUGAR</button>
+            <button id="skinsBtn" class="menu-button skins-btn">SKINS</button>
+          </div>
+          <div class="menu-controls">
+            <div class="control-item">
+              <span class="key-icon">SPACE</span>
+              <span class="key-desc">Saltar</span>
+            </div>
+            <div class="control-item">
+              <span class="key-icon">DOWN / S</span>
+              <span class="key-desc">Agacharse</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menú de Skins -->
+      <div id="skinMenu" class="skin-menu hidden">
+        <div class="skin-menu-content">
+          <div class="skin-menu-header">
+            <button id="backBtn" class="back-button">← VOLVER</button>
+            <span class="skin-coins">🪙 <span id="skinMenuCoins">0</span></span>
+          </div>
+          <h2 class="skin-menu-title">TIENDA DE SKINS</h2>
+          <div id="skinsContainer" class="skins-container"></div>
+        </div>
+      </div>
+
+      <!-- Overlay de Game Over -->
+      <div id="gameOverlay" class="game-overlay">
+        <div class="overlay-content">
+          <h2 class="game-over-title">GAME OVER</h2>
+          <p class="final-score">Puntuación: <span id="finalScore">0</span></p>
+          <p class="coins-earned">Monedas totales: <span id="finalCoins">0</span></p>
+          <button id="restartBtn" class="restart-button">JUGAR DE NUEVO</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
